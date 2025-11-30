@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --primary-color: #05051a;
+    --secondary-color: #DF5524;
+}
+
+body {
+    width: 100%;
+    padding-top: 80px;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #030e21; 
+    background-image: linear-gradient(315deg, #05051a 29%, #1C1C71); 
+    padding: 2rem;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+
+.navbar, footer {
+    background-color: #05051a;
+    
+}
+.navbar-brand {
+    font-size: 0.9rem;
+}
+.navbar a  {
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+h1 {
+color: var(--secondary-color);
+font-weight: 700;
+letter-spacing: 0.1rem;
+font-size: 0.8rem;
+}
+
+.footer-info, footer a {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    
+}
+
+
+
+@media screen and (min-width:600px) {
+    .navbar-brand, .navbar a, .footer-info, footer a{
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+    
