@@ -26,6 +26,7 @@ body {
 	padding: 0;
 	margin: 0;
 	min-height: 100vh;
+	padding-top: 80px;
 }
 
 /* Action Bar / Navigation */
@@ -333,6 +334,9 @@ header h1 {
 	margin: 0;
 }
 
+h3 {
+	color: var(--accent);
+}
 /* Home Page Specific */
 .home-header {
 	text-align: center;
