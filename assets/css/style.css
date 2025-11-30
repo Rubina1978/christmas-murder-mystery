@@ -236,6 +236,102 @@ footer {
 	color: var(--accent);
 }
 
+/* Header */
+header {
+	text-align: center;
+	padding: 2rem 0;
+	margin-top: 80px;
+	border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+	color: var(--accent);
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+
+/* Introduction Section */
+#introduction {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	background-color: var(--bg-secondary);
+}
+
+#introduction h2 {
+	color: var(--accent-alt);
+	font-weight: 600;
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	letter-spacing: 0.05em;
+}
+
+#introduction em {
+	color: var(--accent);
+	font-style: normal;
+}
+
+#introduction strong {
+	color: var(--accent-alt);
+}
+
+#introduction ul {
+	margin: 1rem 0 1rem 2rem;
+	color: var(--text-primary);
+	list-style: none;
+}
+
+#introduction ul li {
+	margin: 0.5rem 0;
+	padding-left: 1rem;
+	position: relative;
+}
+
+#introduction ul li::before {
+	content: "→ ";
+	color: var(--accent);
+	margin-right: 0.5rem;
+	position: absolute;
+	left: 0;
+}
+
+/* Poem Section */
+#poem {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	background-color: var(--bg-secondary);
+}
+
+#poem strong {
+	color: var(--accent-alt);
+	display: block;
+	margin-bottom: 1.5rem;
+	font-size: 1rem;
+}
+
+#poem p {
+	margin: 1rem 0;
+	color: var(--text-primary);
+	font-size: 0.95rem;
+	line-height: 1.8;
+}
+
+#poem #verse_1,
+#poem #verse_2,
+#poem #verse_3 {
+	border-left: 2px solid var(--accent);
+	padding-left: 1rem;
+	margin: 1.5rem 0;
+}
+
+#poem p strong {
+	color: var(--accent);
+	display: inline;
+	margin: 0;
+}
+
 /* Home Page Specific */
 .home-header {
 	text-align: center;
