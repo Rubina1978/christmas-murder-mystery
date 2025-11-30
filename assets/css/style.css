@@ -11,8 +11,9 @@
 	--bg-secondary: #0a0a0a;
 	--text-primary: #ffffff;
 	--text-secondary: #a0a0a0;
-	--accent: #00ff00;
-	--accent-alt: #ffff00;
+	--accent: #dc143c;
+	--accent-alt: #228b22;
+	--accent-yellow: #ffd700;
 	--border: #333333;
 	--hover-bg: #1a1a1a;
 }
@@ -126,7 +127,7 @@ h2 {
 }
 
 h3 {
-	color: var(--text-secondary);
+	color: var(--accent-yellow);
 	font-weight: 600;
 	font-size: 1rem;
 	margin: 1.5rem 0 0.5rem 0;
@@ -166,7 +167,7 @@ section {
 }
 
 #notes {
-	border-left: 3px solid var(--text-secondary);
+	border-left: 3px solid var(--accent-yellow);
 	padding-left: 1rem;
 }
 
@@ -418,4 +419,46 @@ header h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+/* Answer Page Styles */
+#reveal {
+	margin: 2rem 0;
+}
+
+#explanation,
+#evidence,
+#conclusion {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	background-color: var(--bg-secondary);
+}
+
+#explanation h2,
+#evidence h2,
+#conclusion h2 {
+	color: var(--accent-alt);
+	margin-bottom: 1rem;
+}
+
+#evidence ul {
+	margin: 1rem 0 1rem 2rem;
+	color: var(--text-primary);
+	list-style: none;
+}
+
+#evidence ul li {
+	margin: 0.75rem 0;
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+#evidence ul li::before {
+	content: "• ";
+	color: var(--accent);
+	font-size: 1.5rem;
+	margin-right: 0.5rem;
+	position: absolute;
+	left: 0;
 }

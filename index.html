@@ -236,6 +236,76 @@
 				<p>Select a character to investigate their story and gather clues.</p>
 			</div>
 
+			<div
+				class="terminal-box"
+				style="text-align: center; margin: 2rem 0"
+				id="answer-section"
+			>
+				<div id="countdown-container">
+					<p>
+						<strong>The answer will be revealed on December 25th!</strong>
+					</p>
+					<div
+						id="countdown"
+						style="margin: 1.5rem 0; font-size: 1.2rem"
+					>
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; max-width: 600px; margin: 0 auto">
+							<div style="border: 1px solid var(--border); padding: 1rem">
+								<div
+									id="days"
+									style="font-size: 2rem; color: var(--accent); font-weight: 700"
+								>
+									0
+								</div>
+								<div style="color: var(--text-secondary); font-size: 0.9rem">Days</div>
+							</div>
+							<div style="border: 1px solid var(--border); padding: 1rem">
+								<div
+									id="hours"
+									style="font-size: 2rem; color: var(--accent-alt); font-weight: 700"
+								>
+									0
+								</div>
+								<div style="color: var(--text-secondary); font-size: 0.9rem">Hours</div>
+							</div>
+							<div style="border: 1px solid var(--border); padding: 1rem">
+								<div
+									id="minutes"
+									style="font-size: 2rem; color: var(--accent-yellow); font-weight: 700"
+								>
+									0
+								</div>
+								<div style="color: var(--text-secondary); font-size: 0.9rem">Minutes</div>
+							</div>
+							<div style="border: 1px solid var(--border); padding: 1rem">
+								<div
+									id="seconds"
+									style="font-size: 2rem; color: var(--accent); font-weight: 700"
+								>
+									0
+								</div>
+								<div style="color: var(--text-secondary); font-size: 0.9rem">Seconds</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					id="reveal-button-container"
+					style="display: none"
+				>
+					<p>
+						<strong>Think you know who did it?</strong>
+						<br />
+						<a
+							href="answer.html"
+							class="action-button"
+							style="margin-top: 1rem"
+							>Reveal the Answer</a
+						>
+					</p>
+				</div>
+			</div>
+
 			<div class="character-grid">
 				<a
 					href="santa.html"
@@ -346,5 +416,53 @@
 			src="https://kit.fontawesome.com/68be089ad3.js"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			(function () {
+				// Set target date to December 25th of current year
+				const now = new Date();
+				const currentYear = now.getFullYear();
+				const targetDate = new Date(currentYear, 11, 25, 0, 0, 0); // Month is 0-indexed, so 11 = December
+
+				// If we've passed Dec 25 this year, set target to next year
+				if (now > targetDate) {
+					targetDate.setFullYear(currentYear + 1);
+				}
+
+				const countdownContainer = document.getElementById("countdown-container");
+				const revealButtonContainer = document.getElementById("reveal-button-container");
+				const daysEl = document.getElementById("days");
+				const hoursEl = document.getElementById("hours");
+				const minutesEl = document.getElementById("minutes");
+				const secondsEl = document.getElementById("seconds");
+
+				function updateCountdown() {
+					const now = new Date();
+					const difference = targetDate - now;
+
+					if (difference <= 0) {
+						// Time's up! Show the reveal button
+						countdownContainer.style.display = "none";
+						revealButtonContainer.style.display = "block";
+						return;
+					}
+
+					const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+					const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+					const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+					daysEl.textContent = days.toString().padStart(2, "0");
+					hoursEl.textContent = hours.toString().padStart(2, "0");
+					minutesEl.textContent = minutes.toString().padStart(2, "0");
+					secondsEl.textContent = seconds.toString().padStart(2, "0");
+				}
+
+				// Initial check
+				updateCountdown();
+
+				// Update every second
+				setInterval(updateCountdown, 1000);
+			})();
+		</script>
 	</body>
 </html>
