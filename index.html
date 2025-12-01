@@ -235,10 +235,11 @@
    <p>Because the North Pole and the Santa's kingdom is huge then there will be quite a lot</p>
    <p>Lets have look on the possible suspects</p>
   </div>
-  <!-- Swiper CSS in <head> -->
+  
 
 
 <section class="container my-5" id="suspects">
+  <!-- swiper from ChatGPT -->
   <div class="swiper slide-container">
     <div class="swiper-wrapper">
 
@@ -396,17 +397,6 @@
         </div>
       </div>
 
-      <!-- CARD 15 -->
-      <!-- <div class="swiper-slide">
-        <div class="card h-100 d-flex flex-column">
-          <img src="assets/images/barbara.jpg" class="card-img-top" alt="Barbara 2">
-          <div class="card-body d-flex flex-column">
-            <p class="card-text">Additional Barbara info if needed...</p>
-            <a href="barbara.html" class="btn btn-primary mt-auto w-100">Read more</a>
-          </div>
-        </div>
-      </div> -->
-
     </div>
 
     <!-- Navigation buttons -->
@@ -415,7 +405,24 @@
   </div>
 </section>
 
-<!-- Swiper JS -->
+<section class="container text-center guess=suspect mb-6" id="suspect">
+  <fieldset>
+      <legend>The suspect?</legend>
+      <br>
+      <label class="question" for="suspect">Who do you think the suspect is?</label>
+      <input type="text" id="suspect" placeholder="The suspect?">
+      <br>
+
+      <label for="why">Why do think so?</label>
+      <br>
+      <!-- textarea -->
+      <textarea id="why" placeholder="Type why this suspect?" rows="6" cols="60"></textarea>
+      <br>
+      <button class="btn btn-primary custom-btn mt-3">Submit</button>
+    </fieldset>
+</section>
+
+<!-- Swiper JS  code taken from ChatGPT-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.slide-container', {
