@@ -389,6 +389,16 @@ h3 {
 	color: var(--accent);
 }
 
+.swiper-slide .card {
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+	min-height: 400px;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
 	.navbar {
@@ -421,6 +431,7 @@ h3 {
 	h2 {
 		font-size: 1rem;
 	}
+
 }
 
 /* Bootstrap Override */
