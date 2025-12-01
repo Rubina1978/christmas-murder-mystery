@@ -24,6 +24,7 @@ submitBtn.addEventListener('click', () => {
 
     if (selected === guiltySuspect) {
         alert("it was me");
+        window.location.href = "answer.html"; /*added with help of chatgpt as resolution to revealing the whole guilty page*/
     } else {
         alert("it wasn't me");
     }
