@@ -9,29 +9,26 @@ const patch = document.getElementById("patch");
 const policeman = document.getElementById("policeman");
 const rudolph= document.getElementById("rudolph");
 const santa = document.getElementById("santa");
-const guiltySuspect = document.getElementById("scrooge");
 const stableBoy = document.getElementById("stable-boy");
 const tinyTim = document.getElementById("tiny-tim");
 
 let character = ["barbara", "frosty", "gumdrop", "head-elf", "mr-fircone", "mrs-claus", "patch", "policeman", "rudolph", "santa", "scrooge", "stable-boy", "tiny-tim"];
 
-let submitBtn = document.getElementById("submitBtn")
-let suspectSelect = document.getElementById("suspect")
+let submitBtn = document.getElementById("submitBtn");
+let suspectInput = document.getElementById("suspect");
 
+let guiltySuspect = "scrooge";  // the one who is guilty
 
-
-
-
-// guilty not guilty created code then corrected with chatgpt//
 submitBtn.addEventListener('click', () => {
-    const selected = suspectSelect;
+    const selected = suspectInput.value.trim().toLowerCase();
+
     if (selected === guiltySuspect) {
         alert("it was me");
-    }if (selected !== guiltySuspect) {
-    alert("it wasn't me");
+    } else {
+        alert("it wasn't me");
     }
-   
 });
+
 
 
 
