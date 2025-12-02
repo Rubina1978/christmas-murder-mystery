@@ -147,12 +147,19 @@ p {
 
 /* Images */
 #image img {
-	max-width: 100%;
+	max-width: 300px;
+	width: 100%;
 	height: auto;
 	border: 1px solid var(--border);
 	display: block;
 	margin: 1rem 0;
 	filter: grayscale(20%) contrast(1.1);
+	border-radius: 5px;
+}
+
+#dead-santa {
+	max-width: 300px;
+	width: 100%;
 }
 
 /* Sections */
@@ -336,9 +343,9 @@ header h1 {
 	display: inline;
 	margin: 0;
 }
-
-h3 {
+ h3 {
 	color: var(--accent);
+	
 }
 /* cards styling */
 .card-text {
@@ -638,6 +645,11 @@ main {
         font-size: 0.85rem;
         padding: 0.5rem 1rem;
     }
+	#image img {
+		width:100%;
+		height: auto;
+		
+	}
 }
 
 @media screen and (max-width:380px) {
