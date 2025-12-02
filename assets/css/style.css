@@ -37,14 +37,14 @@ body {
 	border-bottom: 1px solid var(--border);
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    
 }
 
 
 .navbar-brand {
 	color: var(--accent) !important;
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: 1.4rem;
 	text-decoration: none;
 	letter-spacing: 0.1em;
 }
@@ -66,7 +66,7 @@ body {
 	padding: 0.5rem;
 	border: 1px solid transparent;
 	transition: all 0.2s;
-	font-size: 0.9rem;
+	font-size: 1.3rem;
 }
 
 .nav-link:hover,
@@ -80,12 +80,14 @@ body {
 	background-color: var(--bg-secondary);
 	border: 1px solid var(--border);
 	padding: 0.5rem 0;
+	z-index: 2000;
 }
 
 .dropdown-item {
 	color: var(--text-primary) !important;
 	padding: 0.5rem 1rem;
-	font-size: 0.9rem;
+	font-size: 1.1rem;
+	
 }
 
 .dropdown-item:hover {
@@ -140,7 +142,7 @@ h3 {
 p {
 	color: var(--text-primary);
 	margin-bottom: 1rem;
-	font-size: 0.95rem;
+	font-size: 1.1rem;
 }
 
 /* Images */
@@ -523,7 +525,7 @@ label {
 	}
 	.navbar-brand {
 	color: var(--accent) !important;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	
 	
 }
@@ -536,6 +538,16 @@ label {
 	color: #000000;
 
 
+}
+
+.nav-link {
+	padding: 0.3rem;
+	
+}
+
+.dropdown-item {
+	padding: 0.5rem;
+	font-size: 0.9rem;
 }
 header h1 {
 	font-size: 1.1rem;
@@ -627,3 +639,19 @@ main {
         padding: 0.5rem 1rem;
     }
 }
+
+@media screen and (max-width:380px) {
+	.nav-link {
+	font-size: 0.9rem;
+}
+.dropdown-item {
+	font-size: 0.9rem;
+	padding: 0.3rem;
+	
+}
+.dropdown-menu {
+	padding: 0.3rem;
+	height: 100vh;
+}
+}
+
